@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".pages.backend.BackendEntryActivity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/open_ui_test_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UiTest" />
+
+            <Button
+                android:id="@+id/start_service_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Start Service" />
+
+            <Button
+                android:id="@+id/stop_service_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Stop Service" />
+
+            <Button
+                android:id="@+id/bind_service_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bind Service" />
+
+            <Button
+                android:id="@+id/unbind_service_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Unbind Service" />
+
+            <Button
+                android:id="@+id/open_fore_notification_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Open fore norification" />
+
+            <Button
+                android:id="@+id/stop_foreground_service_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Stop foreground service" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

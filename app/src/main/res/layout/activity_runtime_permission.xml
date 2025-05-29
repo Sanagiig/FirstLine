@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".pages.auth.RuntimePermissionActivity">
+
+    <Button
+        android:id="@+id/call_phone_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Request call phone Permission" />
+
+    <Button
+        android:id="@+id/read_contact_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="read contact" />
+
+    <Button
+        android:id="@+id/add_book_by_provider_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="add book by provider" />
+
+    <EditText
+        android:id="@+id/book_name_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/get_book_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="get book by txt" />
+
+    <ListView
+        android:id="@+id/contact_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
