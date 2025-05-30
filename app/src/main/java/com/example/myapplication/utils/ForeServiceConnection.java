@@ -6,14 +6,21 @@ import android.os.IBinder;
 import android.util.Log;
 
 import com.example.myapplication.pages.backend.ForegroundService;
+import com.example.myapplication.pages.backend.IProgressChanger;
 
 public class ForeServiceConnection implements ServiceConnection {
     public static final String TAG = "ForeServiceConnection";
     private ForegroundService mService;
+    private IProgressChanger  mProgressChanger;
+
+    public ForeServiceConnection(IProgressChanger progressChanger) {
+        mProgressChanger = progressChanger;
+    }
 
     @Override
     public void onServiceConnected(ComponentName name, IBinder service) {
         mService = ((ForegroundService.MyBinder) service).getService();
+        addProgressListener(mProgressChanger);
         Log.d(TAG, "onServiceConnected: ");
     }
 
@@ -37,5 +44,12 @@ public class ForeServiceConnection implements ServiceConnection {
 
     public ForegroundService getService(){
         return mService;
+    }
+
+    public void addProgressListener(IProgressChanger progressChanger){
+        mProgressChanger = progressChanger;
+        if(mService != null){
+            mService.addProgressListener(this, mProgressChanger);
+        }
     }
 }

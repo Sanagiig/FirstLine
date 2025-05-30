@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -20,6 +22,7 @@ import com.example.myapplication.utils.PermissionRequestCode;
 
 public class BackendEntryActivity extends AppCompatActivity {
     public static final String TAG = "BackendEntryActivity";
+    private TextView progressText;
     private ServiceConnection serviceConnection;
     private ForegroundService  foregroundService;
     private ForeServiceConnection  foregroundServiceConnection;
@@ -53,6 +56,8 @@ public class BackendEntryActivity extends AppCompatActivity {
         if (serviceConnection == null) {
             serviceConnection = new MyServiceConnection();
         }
+
+        progressText = findViewById(R.id.progress_text);
         findViewById(R.id.open_ui_test_btn).setOnClickListener(v -> {
             Intent intent = new Intent(this, UiTestActivity.class);
             startActivity(intent);
@@ -86,7 +91,7 @@ public class BackendEntryActivity extends AppCompatActivity {
         });
 
         findViewById(R.id.stop_foreground_service_btn).setOnClickListener(v -> {
-
+            foregroundServiceConnection.getService().stopProgress();
         });
     }
 
@@ -94,7 +99,14 @@ public class BackendEntryActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ForegroundService.class);
         startForegroundService(intent);
         intent.putExtra("data",10);
-        foregroundServiceConnection = new ForeServiceConnection();
-        bindService(intent, foregroundServiceConnection, BIND_AUTO_CREATE);
+        foregroundServiceConnection = new ForeServiceConnection(this::updateProgress);
+
+        var res = bindService(intent, foregroundServiceConnection, BIND_AUTO_CREATE);
+        Log.d(TAG, "startFore: res: " + res);
+    }
+
+    private void updateProgress(int progress) {
+        Log.d(TAG, "updateProgress: " + progress);
+        progressText.setText("progress: " + progress);
     }
 }
