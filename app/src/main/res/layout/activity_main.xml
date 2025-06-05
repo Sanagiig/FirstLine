@@ -8,6 +8,11 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,5 +48,41 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Go to Backend" />
+
+    <Button
+        android:id="@+id/go_tool_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="go tool" />
+
+    <Button
+        android:id="@+id/context_test_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="context test" />"
+
+    <Button
+        android:id="@+id/send_static_broadcast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="send static broadcast" />
+
+    <Button
+        android:id="@+id/send_dynamic_broadcast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="send dynamic broadcast" />
+
+    <Button
+        android:id="@+id/open_provider_test_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="open provider test" />
+
+    <Button
+        android:id="@+id/start_timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="start_timer" />
 
 </LinearLayout>
