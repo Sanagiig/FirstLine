@@ -14,18 +14,24 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/open_drawer_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="xxxx"></Button>
-        <!--        <androidx.appcompat.widget.Toolbar-->
-        <!--            android:id="@+id/toolbar"-->
-        <!--            app:logo="@drawable/ic_launcher_background"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:background="?attr/colorAccent" />-->
+ 
+ 
+            android:text="Open Drawer" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hello World!" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:contentDescription="TODO"
+            android:src="@drawable/ic_launcher_foreground" />
+ 
 
     </LinearLayout>
 

@@ -1,36 +1,5 @@
 package com.example.myapplication;
 
-import android.annotation.SuppressLint;
-import android.app.AlarmManager;
-import android.app.PendingIntent;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.os.Bundle;
-import android.os.SystemClock;
-import android.util.Log;
-import android.view.Menu;
-import android.widget.Toast;
-
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
-import com.example.myapplication.dto.SendMsg;
-import com.example.myapplication.dto.SendMsg2;
-import com.example.myapplication.helper.MyApplication;
-import com.example.myapplication.pages.auth.RuntimePermissionActivity;
-import com.example.myapplication.pages.backend.BackendEntryActivity;
-import com.example.myapplication.pages.mutiMedia.NotificationActivity;
-import com.example.myapplication.pages.provider.ProviderTestActivity;
-import com.example.myapplication.pages.store.PreferrencesActivity;
-import com.example.myapplication.pages.store.SdbActivity;
-import com.example.myapplication.pages.tool.DrawerTestActivity;
-import com.example.myapplication.receiver.CountReceiver;
-
 import java.time.LocalDateTime;
 
 public class MainActivity extends AppCompatActivity {
@@ -168,5 +137,6 @@ public class MainActivity extends AppCompatActivity {
 //                    triggerAtMillis, pendingIntent);
 //        } else {
 //        }
+
     }
 }

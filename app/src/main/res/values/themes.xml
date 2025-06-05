@@ -3,6 +3,11 @@
     <style name="Base.Theme.MyApplication" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary" >@color/design_default_color_on_primary</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent" >@color/design_default_color_error</item>
+        <item name="android:textColorPrimary" >#9142E2</item>
+        <item name="android:windowBackground">#9DDD95</item>
     </style>
 
     <style name="Theme.MyApplication" parent="Base.Theme.MyApplication" />

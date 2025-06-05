@@ -38,6 +38,8 @@ dependencies {
     //noinspection GradleDeprecatedConfiguration
     implementation 'org.litepal.guolindev:core:3.2.3'
     implementation "androidx.media3:media3-datasource-okhttp:1.7.1"
+    //noinspection UseTomlInstead
+    implementation 'com.amap.api:map2d:latest.integration'
     implementation libs.storage
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
